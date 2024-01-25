@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('body')
-    <h1 class="mb-0">Edit Product</h1>
+    <h1 class="mb-0">Edit</h1>
     <hr />
     <div class="mb-3">
         <label class="form-label">Current Status</label>
@@ -16,21 +16,21 @@
         <div class="row">
             <div class="col mb-3">
                 <label class="form-label">Plate Number</label>
-                <input type="text" name="title" class="form-control" placeholder="Title" value="{{ $product->title }}" >
+                <input type="text" name="platenumber" class="form-control" placeholder="platenumber" value="{{ $product->platenumber }}" >
             </div>
             <div class="col mb-3">
                 <label class="form-label">Current Color</label>
-                <input type="text" name="price" class="form-control" placeholder="Price" value="{{ $product->price }}" >
+                <input type="text" name="currentcolor" class="form-control" placeholder="currentcolor" value="{{ $product->currentcolor }}" >
             </div>
         </div>
         <div class="row">
             <div class="col mb-3">
                 <label class="form-label">Target Color</label>
-                <input type="text" name="product_code" class="form-control" placeholder="Product Code" value="{{ $product->product_code }}" >
+                <input type="text" name="targetcolor" class="form-control" placeholder="targetcolor" value="{{ $product->targetcolor }}" >
             </div>
             <div class="col mb-3">
                 <label class="form-label">Status</label>
-                <textarea class="form-control" name="description" placeholder="Description">{{ $product->description }}</textarea>
+                <textarea class="form-control" name="status" placeholder="status">{{ $product->status }}</textarea>
             </div>
         </div>
         @if ($product->status !== 'done')

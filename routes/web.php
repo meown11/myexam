@@ -1,4 +1,4 @@
-//routes/web.php
+
 <?php
  
 use Illuminate\Support\Facades\Route;
@@ -10,3 +10,4 @@ Route::get('/', function () {
 });
  
 Route::resource('/product', ProductController::class);
+Route::put('product/{id}/update-status', [ProductController::class, 'updateStatus'])->name('product.updateStatus');
